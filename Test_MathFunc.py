@@ -15,8 +15,9 @@ def test_product():
 #@pytest.mark.skip(reason = "do not run the test")
 #Skipif can also be used if conditonal skip is required
 def test_Junk():
+    print(MathFunc.product (7,3),'Testing of print')# use -s to capture print
     #assert 'ii' == MathFunc.add ( 'i')
-    print  = (MathFunc.product (7,3),'Testing of print')# use -s to capture print
+   
      
     
 @pytest.mark.string #option to only run seleted test marked by number
