@@ -36,3 +36,5 @@ def test_product_Strings():
     assert type(result)is str
     assert 'Hello' in result 
 
+#Next we will do the Parameteize test and will completely change the file. The codes
+#will be lot less.
