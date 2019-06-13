@@ -1,12 +1,14 @@
 import MathFunc
 import pytest
-'''
-With the use of decorator "@pytest.mark.*", only selected test cases can
-be executed. The selection is done in the commandline giving the argument * 
-in pytest command
-E.g  "  pytest -v  -m  number Test_mark_Selective"   if we want to run only test functions def test_add()
-and def test_product():
-Read other red comments that provide important selective test functions or wathch the video lesson 2
+
+''' Instead of calling the same codes over and over again to setup e.g
+to connect and disconnect hardware or intialize a object or database..
+This feature(Setup) will help to do it only once before the test. While teardown
+will help to release the setup at the end of the test.
+
+-Very useful if the setup and tear down has to be done within the test case
+you run.  
+
 '''
 
 
@@ -28,7 +30,6 @@ def test_Junk():
     #assert 'ii' == MathFunc.add ( 'i')
    
      
-    
 @pytest.mark.string #option to only run seleted test marked by number
 def test_add_Strings():
     result = MathFunc.add('Hello', 'World')
