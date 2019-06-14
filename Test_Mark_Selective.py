@@ -7,6 +7,9 @@ in pytest command
 E.g  "  pytest -v  -m  number Test_mark_Selective"   if we want to run only test functions def test_add()
 and def test_product():
 Read other red comments that provide important selective test functions or wathch the video lesson 2
+
+Note: There are also options to execute the selected tests with tetcase strings in
+by passing the arguments in command line.
 '''
 
 

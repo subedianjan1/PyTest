@@ -7,28 +7,29 @@ This feature(Setup) will help to do it only once before the test. While teardown
 will help to release the setup at the end of the test.
 )
 '''
+
 setupState =  None  #Global Variable
 
 def setup_module(module):
-   
-    #code that Intitialises the setup or Hware ( do the action of setup)
+  #  global setupState
+    #code that Intitialises the setup or Hware
     print(" Initialed the database or HWare")
     print( "Connected to Hardware")
   
-def setup_module(module):
+def teardown_module(module):
     print(" Disconnect Hardware or close the databae")
-    # do the action of releasing here
    
 @pytest.mark.number #option to only run seleted test marked by number
 def test_add():
     assert MathFunc.add(7,3) == 10
     assert MathFunc.add(7) == 9    # second is given default in function as 2
-  
+    
+    
 @pytest.mark.number
 def test_product():
     assert MathFunc.product(7,3) == 21
     assert MathFunc.product(7) == 14
-   
+    
  #instead of == we can also use <,>,=>. != etc
 
 #@pytest.mark.skip(reason = "do not run the test")
