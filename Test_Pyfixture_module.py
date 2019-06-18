@@ -8,22 +8,27 @@ will help to release the setup at the end of the test.
 
 If somethig has to be run each time before each test function can use fixture.
 No need to type code each time for function.
+
+Do the Module wise Setup tear down rather than for each function.
+
 )
 '''
 
-@pytest.fixture
-def setupState():
+@pytest.fixture(scope='module')
+def setupState(): #Afer scoping for module. Only supposed to be executed onec.
     setupState  = 0
+    print ("******************Setup*****************")
     #code that Intitialises the setup or Hware
     setupState  = 1
-    return setupState
-     
+    yield setupState
+    print ("******************teardown*****************")
 @pytest.mark.number #option to only run seleted test marked by number
 def test_add(setupState):
     if setupState == 1:
         print("Initialed the database or HWare")
     assert MathFunc.add(7,3) == 10
     assert MathFunc.add(7) == 9    # second is given default in function as 2
+    setupState = 0
     
     
 @pytest.mark.number
@@ -32,6 +37,7 @@ def test_product(setupState):
         print("Initialed the database or HWare")
      assert MathFunc.product(7,3) == 21
      assert MathFunc.product(7) == 14
+     setupState = 0
     
  #instead of == we can also use <,>,=>. != etc
 
@@ -42,6 +48,7 @@ def test_Junk(setupState):
         print("Initialed the database or HWare")
     assert MathFunc.product(7,3) == 21
     print(MathFunc.product (7,3),'Testing of print')# use -s to capture print
+    setupState = 0
     
      
 @pytest.mark.string #option to only run seleted test marked by number
@@ -53,6 +60,7 @@ def test_add_Strings(setupState):
     assert type(result) is str
     assert 'Hello' in result                            
     assert 'Helllo'not in result
+    setupState = 0
       
 @pytest.mark.string 
 def test_product_Strings(setupState):
@@ -62,5 +70,6 @@ def test_product_Strings(setupState):
     result  = MathFunc.product('Hello')
     assert result == 'HelloHello'
     assert type(result)is str
-    assert 'Hello' in result 
+    assert 'Hello' in result
+    setupState = 0
 
