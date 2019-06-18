@@ -1,3 +1,4 @@
+''' Python program to be tested by Pytest '''
 
 def add(x, y=2):
     return x+y
