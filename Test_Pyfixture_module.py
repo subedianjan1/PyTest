@@ -12,6 +12,9 @@ No need to type code each time for function.
 Do the Module wise Setup tear down rather than for each function.
 
 )
+
+cd C:\Projects\Github\Python-Test-Work\PyTest
+pytest -v -s Test_Pyfixture_mpdule.py
 '''
 
 @pytest.fixture(scope='module')

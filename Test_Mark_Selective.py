@@ -10,6 +10,11 @@ Read other red comments that provide important selective test functions or wathc
 
 Note: There are also options to execute the selected tests with tetcase strings in
 by passing the arguments in command line.
+
+To Execute:
+cd C:\Projects\Github\Python-Test-Work\PyTest
+pytest -v -s Test_Mark_Selective.py
+
 '''
 
 

@@ -3,7 +3,13 @@ import pytest
 
 ''' Instead of calling the same function many times as in "Test_Mark_Selective.py"
 This time we parametrize it so that the function is call only once but with many
-input variables '''
+input variables
+
+To Execute:
+cd C:\Projects\Github\Python-Test-Work\PyTest
+pytest -v -s Test_Mark_Parametrize.py
+
+'''
 
 @pytest.mark.parametrize('Add1,Add2,AddResult',
                             [            #List the input variables
