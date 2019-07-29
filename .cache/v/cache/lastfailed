@@ -1,0 +1,12 @@
+{
+  "Test_Pyfixture_fn.py::test_Junk": true,
+  "Test_Pyfixture_fn.py::test_add": true,
+  "Test_Pyfixture_fn.py::test_add_Strings": true,
+  "Test_Pyfixture_fn.py::test_product": true,
+  "Test_Pyfixture_fn.py::test_product_Strings": true,
+  "Test_Pyfixture_module.py::test_Junk": true,
+  "Test_Pyfixture_module.py::test_add": true,
+  "Test_Pyfixture_module.py::test_add_Strings": true,
+  "Test_Pyfixture_module.py::test_product": true,
+  "Test_Pyfixture_module.py::test_product_Strings": true
+}
