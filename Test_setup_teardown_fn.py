@@ -9,17 +9,17 @@ will help to release the setup at the end of the test.
 
 
 cd C:\Projects\Github\Python-Test-Work\PyTest
-pytest -v -s Test_setup_teardown.py
+pytest -v -s Test_setup_teardown_fn.py
 '''
-setupState =  None  #Global Variable
+setupState =  None  #Global Variable 
 
-def setup_module(module):
+def setup_function(function):
    
     #code that Intitialises the setup or Hware ( do the action of setup)
     print(" Initialed the database or HWare")
     print( "Connected to Hardware")
   
-def setup_module(module):
+def teardown_function(function):
     print(" Disconnect Hardware or close the databae")
     # do the action of releasing here
    

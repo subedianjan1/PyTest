@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform win32 -- Python 3.7.3, pytest-4.6.3, py-1.8.0, pluggy-0.12.0 -- c:\users\anjan\appdata\local\programs\python\python37\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Projects\Github\Python-Test-Work\PyTest
+plugins: dependency-0.4.0, mock-1.10.4
+collecting ... collected 6 items
+
+Test_Mark_Selective.py::test_add PASSED                                  [ 16%]
+Test_Mark_Selective.py::test_product PASSED                              [ 33%]
+Test_Mark_Selective.py::test_Junk PASSED                                 [ 50%]
+Test_Mark_Selective.py::test_add_Strings PASSED                          [ 66%]
+Test_Mark_Selective.py::test_add_Strings1 SKIPPED                        [ 83%]
+Test_Mark_Selective.py::test_product_Strings PASSED                      [100%]
+
+============================== warnings summary ===============================
+c:\users\anjan\appdata\local\programs\python\python37\lib\site-packages\_pytest\mark\structures.py:337
+  c:\users\anjan\appdata\local\programs\python\python37\lib\site-packages\_pytest\mark\structures.py:337: PytestUnknownMarkWarning: Unknown pytest.mark.number - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+c:\users\anjan\appdata\local\programs\python\python37\lib\site-packages\_pytest\mark\structures.py:337
+  c:\users\anjan\appdata\local\programs\python\python37\lib\site-packages\_pytest\mark\structures.py:337: PytestUnknownMarkWarning: Unknown pytest.mark.string - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+=========================== short test summary info ===========================
+SKIPPED [1] Test_Mark_Selective.py:49: Skipping test_add_Strings1 as it is a repeat of above
+=============== 5 passed, 1 skipped, 2 warnings in 0.08 seconds ===============

@@ -11,7 +11,7 @@ def testLessthan():
 
 # Can print in the traceback with the error message
 def testMorethan():
-    assert 2*2 < 3, "2*2 should be larger Expected"
+    assert 2*2 < 3, "2*2 should be larger; Expected failure"    
 
 def testInstring():
     assert "uu" in "pluubh"

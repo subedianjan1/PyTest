@@ -22,7 +22,7 @@ def setupState():
     #code that Intitialises the setup or Hware
     print('*****Setup******')
     setupState  = 1
-    yield setupState
+    yield setupState # if return is used, it is not executed after each function
     print('*****tear down******')
     setupState  = 0
 @pytest.mark.number #option to only run seleted test marked by number
@@ -40,7 +40,7 @@ def test_product(setupState):
         print("Initialed the database or HWare")
      assert MathFunc.product(7,3) == 21
      assert MathFunc.product(7) == 14
-     setupState = 0
+     setupState == 0 #After runig the test let use say the set up state has gone to 0.
     
  #instead of == we can also use <,>,=>. != etc
 
