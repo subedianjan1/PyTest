@@ -14,9 +14,12 @@ by passing the arguments in command line.
 To Execute:
 cd C:\Projects\Github\Python-Test-Work\PyTest
 pytest -v -s Test_Mark_Selective.py
+pytest -m number -v Test_Mark_Selective.py ( only ro run nember marked tests)
+
 
 '''
 
+#Needs py.ini file so that it does not display warning of not registered markers
 
 @pytest.mark.number #option to only run seleted test marked by number
 def test_add():

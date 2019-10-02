@@ -3,11 +3,11 @@ import pytest
 import time
 
 ''' Instead of calling the same codes over and over again to setup e.g
-to connect and disconnect hardware or intialize a object or database..
+to connect and disconnect hardware or initialize a object or database..
 This feature(Setup) will help to do it only once before the test. While teardown
 will help to release the setup at the end of the test.
 
-If somethig has to be run each time before each test function can use fixture.
+If something has to be run each time before each test function can use fixture.
 No need to type code each time for function.
 
 after the execution of each function setupState changed to 0. However as we run
