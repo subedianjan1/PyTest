@@ -6,6 +6,8 @@ to connect and disconnect hardware or intialize a object or database..
 This feature(Setup) will help to do it only once before the test. While teardown
 will help to release the setup at the end of the test.
 )
+If 'function' parameter is not given to the setup and teardown functions the socpe
+of thier executeion is module
 
 
 cd C:\Projects\Github\Python-Test-Work\PyTest
@@ -13,13 +15,13 @@ pytest -v -s Test_setup_teardown.py
 '''
 setupState =  None  #Global Variable 
 
-def setup_module(method):
+def setup_module():
    
     #code that Intitialises the setup or Hware ( do the action of setup)
     print(" Initialed the database or HWare")
     print( "Connected to Hardware")
   
-def teardown_module(method):
+def teardown_module():
     print(" Disconnect Hardware or close the databae")
     # do the action of releasing here
    
