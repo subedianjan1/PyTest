@@ -1,4 +1,5 @@
-''' Python program to be tested by Pytest '''
+''' Python program to be tested by Pytest 
+funxtions to add and multiply '''
 
 def add(x, y=2):
     return x+y
