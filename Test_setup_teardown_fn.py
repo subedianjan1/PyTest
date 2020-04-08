@@ -7,9 +7,14 @@ This feature(Setup) will help to do it only once before the test. While teardown
 will help to release the setup at the end of the test.
 )
 
-
 cd C:\Projects\Github\Python-Test-Work\PyTest
 pytest -v -s Test_setup_teardown_fn.py
+
+Unlike for fixture no need to pass the function name argument to the test
+functions. The name setup and teardown will do the job.
+
+However fixtures can be useful in different appliations.
+
 '''
 setupState =  None  #Global Variable 
 
