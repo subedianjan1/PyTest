@@ -1,17 +1,12 @@
 import MathFunc
 import pytest
 
-''' Instead of calling the same codes over and over again to setup e.g
-to connect and disconnect hardware or intialize a object or database..
-This feature(Setup) will help to do it only once before the test. While teardown
-will help to release the setup at the end of the test.
+''' 
+Pytest fixture is basically analogus to the function in general programming.
+Once the fixture is defined. it can be passed as a paramerter to to the test function.
+After which the fixture function can be called. It is very useful feature as
+repetion of same code in multiple places can be avoided.
 
-If somethig has to be run each time before each test function can use fixture.
-No need to type code each time for function.
-
-Do the Module wise Setup tear down rather than for each function.
-
-)
 
 cd C:\Projects\Github\Python-Test-Work\PyTest
 pytest -v -s Test_Pyfixture_mpdule.py
