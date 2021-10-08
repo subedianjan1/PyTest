@@ -15,9 +15,10 @@ def Runfirst():
     print ("fixture run")
     Apple = 1
     yield Apple
+    Apple = 0
 
     
-def test001_DoNotUseFixture():
+def test001_fixtureAuto():
     global Apple
     assert 2 ==2
     print (Apple)
